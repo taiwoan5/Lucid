@@ -25,7 +25,6 @@ let txHash = await signedTx.submit();
 console.log(`Transaction hash: https://preview.cexplorer.io/tx/${txHash}`);
 
 
-
 Bài 2: Hàm gửi token :  async function createSendNativeTokens(toAddress: string, policyId: string, assetName: string, amount: bigint) {
   const tx = await lucid.newTx()
   .payTo(toAddress, { [policyId + fromText(assetName)]: amount })
